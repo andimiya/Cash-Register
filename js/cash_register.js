@@ -49,5 +49,6 @@ button1.addEventListener('click', function (){
 });
 
 button5.addEventListener('click', function (){
-  document.getElementById('display').innerHTML = eval(addingArray.join(' '));
+  var totalForNow = eval(addingArray.join(' '));
+  document.getElementById('display').innerHTML = totalForNow;
 });

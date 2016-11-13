@@ -82,3 +82,6 @@ function calculatorModule () {
 
 var calculator = calculatorModule();
 console.log(calculator.load(5));
+
+var display = document.getElementById('display');
+display.innerHTML = calculator.load(5);

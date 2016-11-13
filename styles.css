@@ -1,6 +1,19 @@
+h1{
+  text-align: center
+}
+
 .button{
+  display: inline-block;
   border: 2px solid;
   color: blue;
-  width: 25px;
-  height: 25px
+  width: 100px;
+  height: 100px;
+  font-size: 40px
+}
+
+#calculatorBox{
+  margin: auto;
+  border: 2px solid;
+  width: 450px;
+  height: 700px;
 }

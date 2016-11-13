@@ -24,12 +24,14 @@ function cashRegister(){
 
 
 var calculator = calculatorModule();
-console.log(calculator.load(5));
-// var Asdf = document.getElementById('display');
 
-// Asdf.addEventListener('click', function (){
-//   Asdf.getElementById('display').innerHTML = calculator.load(5);
-// });
+display.addEventListener('click', function (){
+  document.getElementById('display').innerHTML = calculator.load(5);
+});
+
+
+
+
 
 var cashReg = cashRegister();
 console.log(cashReg.afterDeposit(10));

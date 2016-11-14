@@ -26,9 +26,14 @@ function cashRegister(){
 
 
 var calculator = calculatorModule();
+var cashReg = cashRegister();
 var addingArray = [];
 
 
+clear.addEventListener('click', function (){
+  document.getElementById('display').innerHTML = addingArray.length = 0;
+  console.log(addingArray);
+});
 
 button1.addEventListener('click', function (){
   document.getElementById('display').innerHTML = addingArray.push(1);

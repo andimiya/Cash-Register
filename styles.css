@@ -1,23 +1,42 @@
-h1{
+h1 {
   text-align: center
 }
 
-#display{
-  width: 475px
+
+
+#display {
+  width: 800px
 }
 
-.button{
+
+.button {
   display: inline-block;
   border: 2px solid;
   color: blue;
   width: 75px;
   height: 75px;
-  font-size: 40px
+  font-size: 40px;
+
 }
 
-#calculatorBox{
+.cashRegisterButtons {
+  display: inline-block;
+  border: 2px solid;
+  color: blue;
+  width: 200px;
+  height: 75px;
+  font-size: 30px
+
+
+
+}
+
+#calculatorBox {
   margin: auto;
   border: 2px solid;
-  width: 500px;
-  height: 800px;
+  width: 800px;
+  height: 1000px;
+
+
 }
+

@@ -108,27 +108,56 @@ buttonDecimal.addEventListener('click', function (){
 });
 
 buttonMultiply.addEventListener('click', function (){
+  if(addingArray[(addingArray.length-1)] !== '+' && addingArray[(addingArray.length-1)] !== '-' && addingArray[(addingArray.length-1)] !== '/' && addingArray[(addingArray.length-1)] !== '*'){
   addingArray.push("*");
+  console.log(addingArray);
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  } else {
+    addingArray.splice(addingArray.length - 1, 1, '*');
+    console.log(addingArray);
+    document.getElementById('display').innerHTML = addingArray.join('');
+    console.log(addingArray);
+  }
 });
 
 buttonDivide.addEventListener('click', function (){
+  if(addingArray[(addingArray.length-1)] !== '+' && addingArray[(addingArray.length-1)] !== '-' && addingArray[(addingArray.length-1)] !== '/' && addingArray[(addingArray.length-1)] !== '*'){
   addingArray.push("/");
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  } else {
+    addingArray.splice(addingArray.length - 1, 1, '/');
+    console.log(addingArray);
+    document.getElementById('display').innerHTML = addingArray.join('');
+    console.log(addingArray);
+  }
 });
 
 buttonAdd.addEventListener('click', function (){
+  if(addingArray[(addingArray.length-1)] !== '+' && addingArray[(addingArray.length-1)] !== '-' && addingArray[(addingArray.length-1)] !== '/' && addingArray[(addingArray.length-1)] !== '*'){
   addingArray.push("+");
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  }  else {
+    addingArray.splice(addingArray.length - 1, 1, '+');
+    console.log(addingArray);
+    document.getElementById('display').innerHTML = addingArray.join('');
+    console.log(addingArray);
+  }
 });
 
 buttonSubtract.addEventListener('click', function (){
+  if(addingArray[(addingArray.length-1)] !== '+' && addingArray[(addingArray.length-1)] !== '-' && addingArray[(addingArray.length-1)] !== '/' && addingArray[(addingArray.length-1)] !== '*'){
   addingArray.push("-");
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  }  else {
+    addingArray.splice(addingArray.length - 1, 1, '-');
+    console.log(addingArray);
+    document.getElementById('display').innerHTML = addingArray.join('');
+    console.log(addingArray);
+  }
 });
 
 buttonEqual.addEventListener('click', function (){

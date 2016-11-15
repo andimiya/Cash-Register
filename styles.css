@@ -2,6 +2,19 @@ h1 {
   text-align: center
 }
 
+#calculatorBox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around; /*puts a small amount of padding around each button*/
+  text-align: center;
+  border: 2px solid;
+  height: 1000px;
+  width: 600px;
+  margin: auto; /*centers the calculator on the page*/
+}
+
+
 #display {
   width: 800px
 }
@@ -11,8 +24,6 @@ h1 {
   height: 80px;
   width: 80px;
   font-size: 30px;
-
-
 }
 
 .cashRegisterButtons {
@@ -21,19 +32,9 @@ h1 {
   width: 200px;
   font-size: 30px;
 
+
 }
 
 
 
-#calculatorBox {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 2px solid;
-  height: 1000px;
-  width: 600px;
-  margin: auto;
-}
 

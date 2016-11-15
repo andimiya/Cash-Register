@@ -1,22 +1,27 @@
 h1 {
+  font-family: "Arial", "Helvetica", "sans-serif";
   text-align: center
 }
 
 #calculatorBox {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 80px; /*vertically aligns text within the buttons*/
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: center; /*makes all the buttons line up straight*/
+  flex-wrap: wrap; /*buttons wrap within the container*/
   justify-content: space-around; /*puts a small amount of padding around each button*/
-  text-align: center;
+  text-align: center; /*centers text within the buttons*/
   border: 2px solid;
   height: 1000px;
   width: 600px;
   margin: auto; /*centers the calculator on the page*/
+
 }
 
 
 #display {
-  width: 800px
+  border: 2px solid, white;
+  width: 700px
 }
 
 .button {
@@ -30,9 +35,7 @@ h1 {
   border: 2px solid;
   height: 80px;
   width: 200px;
-  font-size: 30px;
-
-
+  font-size: 24px;
 }
 
 

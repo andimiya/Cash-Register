@@ -103,9 +103,11 @@ button00.addEventListener('click', function (){
 });
 
 buttonDecimal.addEventListener('click', function (){
+  if(addingArray.indexOf('.') === -1){
   addingArray.push(".");
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  }
 });
 
 buttonMultiply.addEventListener('click', function (){

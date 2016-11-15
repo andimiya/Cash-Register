@@ -91,15 +91,20 @@ button9.addEventListener('click', function (){
 });
 
 button0.addEventListener('click', function (){
+  if(addingArray.length > 0){
   addingArray.push(0);
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  }
 });
 
 button00.addEventListener('click', function (){
-  addingArray.push(00);
+  if(addingArray.length > 0){
+  addingArray.push(0);
+  addingArray.push(0);
   document.getElementById('display').innerHTML = addingArray.join('');
   console.log(addingArray);
+  }
 });
 
 buttonDecimal.addEventListener('click', function (){
@@ -163,9 +168,17 @@ buttonSubtract.addEventListener('click', function (){
   }
 });
 
-buttonEqual.addEventListener('click', function (){
-  var totalForNow = eval(addingArray.join(''));
-  document.getElementById('display').innerHTML = totalForNow;
-  return totalForNow;
+deposit.addEventListener('click', function(){
+  balance += parseInt(document.getElementById('display').innerHTML);
+  document.getElementById('display').innerHTML = 0;
 });
 
+withdraw.addEventListener('click', function(){
+  balance -= parseInt(document.getElementById('display').innerHTML);
+  document.getElementById('display').innerHTML = 0;
+});
+
+getBalance.addEventListener('click', function(){
+  addingArray = [];
+  document.getElementById('display').innerHTML = balance;
+});

@@ -7,7 +7,47 @@
 </head>
 <body>
 <h1>Calculator</h1>
-<div id="calculatorBox">
+
+<div id="calculatorBox" align="center">
+  <div class="display" input type="text" size="15.75" id="display" readyonly></div>
+  <div class="keys">
+    <p>
+      <input type="button" class="button" value="1" id="button1">
+      <input type="button" class="button" value="2" id="button2">
+      <input type="button" class="button" value="3" id="button3">
+      <input type="button" class="button" value="4" id="button4">
+    </p>
+    <p>
+      <input type="button" class="button" value="5" id="button5">
+      <input type="button" class="button" value="6" id="button6">
+      <input type="button" class="button" value="7" id="button7">
+      <input type="button" class="button" value="8" id="button8">
+    </p>
+    <p>
+      <input type="button" class="button" value="9" id="button9">
+      <input type="button" class="button" value="0" id="button0">
+      <input type="button" class="button" value="00" id="button00">
+      <input type="button" class="button" value="." id="buttonDecimal">
+    </p>
+    <p>
+      <input type="button" class="button" value="x" id="buttonMultiply">
+      <input type="button" class="button" value="/" id="buttonDivide">
+      <input type="button" class="button" value="+" id="buttonAdd">
+      <input type="button" class="button" value="-" id="buttonSubtract">
+    </p>
+    <p>
+      <input type="button" class="button" value="=" id="buttonEqual">
+      <input type="button" class="button" value="C" id="clear">
+      <input type="button" class="button" value="DEP" id="deposit">
+      <input type="button" class="button" value="W/D" id="withdraw">
+    </p>
+    <p>
+      <input type="button" class="button" value="BAL" id="getBalance">
+    </p>
+  </div>
+</div>
+
+<!-- <div id="calculatorBox">
   <p id="display" class="button"></p>
   <p id="button1" class="button">1</p>
   <p id="button2" class="button">2</p>
@@ -30,8 +70,7 @@
   <p id="getBalance" class="button">Get Balance</p>
   <p id="deposit" class="button">Deposit Cash</p>
   <p id="withdraw" class="button">Withdraw Cash</p>
-
-</div>
+</div> -->
 
 <script src="js/calculator.js"></script>
 <script src="js/cash_register.js"></script>

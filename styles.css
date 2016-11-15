@@ -2,41 +2,38 @@ h1 {
   text-align: center
 }
 
-
-
 #display {
   width: 800px
 }
 
-
 .button {
-  display: inline-block;
   border: 2px solid;
-  color: blue;
-  width: 75px;
-  height: 75px;
-  font-size: 40px;
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+
 
 }
 
 .cashRegisterButtons {
-  display: inline-block;
   border: 2px solid;
-  color: blue;
+  height: 80px;
   width: 200px;
-  height: 75px;
-  font-size: 30px
-
-
+  font-size: 30px;
 
 }
 
+
+
 #calculatorBox {
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border: 2px solid;
-  width: 800px;
   height: 1000px;
-
-
+  width: 600px;
+  margin: auto;
 }
 

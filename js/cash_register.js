@@ -28,6 +28,7 @@ function cashRegister(){
 var calculator = calculatorModule();
 var cashReg = cashRegister();
 var addingArray = [];
+var balance = 0;
 
 
 clear.addEventListener('click', function (){
@@ -163,4 +164,6 @@ buttonSubtract.addEventListener('click', function (){
 buttonEqual.addEventListener('click', function (){
   var totalForNow = eval(addingArray.join(''));
   document.getElementById('display').innerHTML = totalForNow;
+  return totalForNow;
 });
+

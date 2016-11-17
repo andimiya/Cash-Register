@@ -261,6 +261,29 @@ var theCalculator = (function(){
           }
           break;
 
+        case partOfOperation.equal:
+          if(typeOfKeyPressed === keyType.number){
+            //if the key we pressed is a number...
+            modifyDisplay(key);
+            this.currentPartOfOperation = partOfOperation.number1;
+          }
+          if(typeOfKeyPressed === keyType.clearEntry){
+            modifyDisplay("0");
+            clearIt();
+          }
+          if(typeOfKeyPressed === keyType.deposit){
+            calc.myBalance += parseInt(calc.display);
+            modifyDisplay("0");
+            clearIt();
+          }
+          if(typeOfKeyPressed === keyType.withdraw){
+            calc.myBalance -= parseInt(calc.display);
+            clearIt();
+          }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
+          }
+
 
 
       }

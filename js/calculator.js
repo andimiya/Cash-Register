@@ -4,7 +4,10 @@ var keyType = {
   decimal: 2,
   operationSymbol: 3,
   clearEntry: 4,
-  equal: 5
+  equal: 5,
+  deposit: 6,
+  withdraw: 7,
+  bal: 8
 };
 
 var partOfOperation = {
@@ -101,6 +104,7 @@ var theCalculator = (function(){
     secondNumber: '',
     //holds the second number
     //calc.action makes 
+    myBalance: '',
     action: function doStuff(typeOfKeyPressed, key){
       switch (this.currentPartOfOperation){
       //checking what part of the operation we're on and only taking in specific types of input. This avoids repeated operators/decimals/operators first, etc.
@@ -115,6 +119,9 @@ var theCalculator = (function(){
             modifyDisplay('0.');
             //and we change the currentPartOfOperation to decimal so that we dont add anymore decimals
             this.currentPartOfOperation = partOfOperation.decimal1;
+          }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
           }
           break;
 
@@ -140,6 +147,18 @@ var theCalculator = (function(){
             modifyDisplay("0");
             clearIt();
           }
+          if(typeOfKeyPressed === keyType.deposit){
+            calc.myBalance += parseInt(calc.display);
+            modifyDisplay("0");
+            clearIt();
+          }
+          if(typeOfKeyPressed === keyType.withdraw){
+            calc.myBalance -= parseInt(calc.display);
+            clearIt();
+          }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
+          }
           break;
 
         case partOfOperation.decimal1:
@@ -155,6 +174,9 @@ var theCalculator = (function(){
             modifyDisplay("0");
             clearIt();
           }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
+          }
           break;
 
         case partOfOperation.operation:
@@ -169,6 +191,9 @@ var theCalculator = (function(){
           if(typeOfKeyPressed === keyType.clearEntry){
             modifyDisplay("0");
             clearIt();
+          }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
           }
           break;
 
@@ -200,6 +225,9 @@ var theCalculator = (function(){
             modifyDisplay("0");
             clearIt();
           }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
+          }
 
 
           break;
@@ -223,6 +251,9 @@ var theCalculator = (function(){
             modifyDisplay(calc.display);
             this.operation = key;
             this.firstNumber = this.display;
+          }
+          if(typeOfKeyPressed === keyType.bal){
+            modifyDisplay(calc.myBalance);
           }
           break;
 
@@ -290,5 +321,14 @@ buttonEqual.addEventListener('click', function(){
 });
 clear.addEventListener('click', function(){
   completeCalculator.action(keyType.clearEntry, 'C');
+});
+deposit.addEventListener('click', function(){
+  completeCalculator.action(keyType.deposit, 'depoz');
+});
+withdraw.addEventListener('click', function(){
+  completeCalculator.action(keyType.withdraw, 'widrawz');
+});
+getBalance.addEventListener('click', function(){
+  completeCalculator.action(keyType.bal, 'balanze');
 });
 //completeCalculator.action(keyType.number, 1)

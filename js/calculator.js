@@ -80,6 +80,13 @@ var theCalculator = (function(){
       calc.display = parseInt(varOne) / parseInt(varTwo);
     }
   }
+  function clearIt(){
+    calc.currentPartOfOperation = partOfOperation.initial;
+    calc.operation = '';
+    calc.display = '';
+    calc.firstNumber = '';
+    calc.secondNumber = '';
+  }
 
   var calc = {
     //these key/value pairs are used to hold values even when we move on. They remember what the first number was, what operator we put, etc.
@@ -130,10 +137,8 @@ var theCalculator = (function(){
             this.currentPartOfOperation = partOfOperation.decimal1;
           }
           if(typeOfKeyPressed === keyType.clearEntry){
-            //if we clear entry
-            //we change display to 0 again and go back to the partOfOperation.initial aka the beginning/onload
             modifyDisplay("0");
-            this.currentPartOfOperation = partOfOperation.initial;
+            clearIt();
           }
           break;
 
@@ -148,7 +153,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.clearEntry){
             modifyDisplay("0");
-            this.currentPartOfOperation = partOfOperation.initial;
+            clearIt();
           }
           break;
 
@@ -160,6 +165,10 @@ var theCalculator = (function(){
           if(typeOfKeyPressed === keyType.decimal){
             modifyDisplay("0.");
             this.currentPartOfOperation = partOfOperation.decimal2;
+          }
+          if(typeOfKeyPressed === keyType.clearEntry){
+            modifyDisplay("0");
+            clearIt();
           }
           break;
 
@@ -187,6 +196,12 @@ var theCalculator = (function(){
             calc.firstNumber = calc.display;
             this.currentPartOfOperation = partOfOperation.operation;
           }
+          if(typeOfKeyPressed === keyType.clearEntry){
+            modifyDisplay("0");
+            clearIt();
+          }
+
+
           break;
 
         case partOfOperation.decimal2:
@@ -201,7 +216,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.clearEntry){
             modifyDisplay("0");
-            this.currentPartOfOperation = partOfOperation.initial;
+            clearIt();
           }
           if(typeOfKeyPressed === keyType.operationSymbol){
             solve(calc.acc1, calc.display);
@@ -272,5 +287,8 @@ buttonDivide.addEventListener('click', function(){
 });
 buttonEqual.addEventListener('click', function(){
   completeCalculator.action(keyType.equal, '=');
+});
+clear.addEventListener('click', function(){
+  completeCalculator.action(keyType.clearEntry, 'C');
 });
 //completeCalculator.action(keyType.number, 1)

@@ -104,7 +104,7 @@ var theCalculator = (function(){
     secondNumber: '',
     //holds the second number
     //calc.action makes 
-    myBalance: '',
+    myBalance: 0,
     action: function doStuff(typeOfKeyPressed, key){
       switch (this.currentPartOfOperation){
       //checking what part of the operation we're on and only taking in specific types of input. This avoids repeated operators/decimals/operators first, etc.
@@ -122,6 +122,10 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+          }
+          if(typeOfKeyPressed === keyType.clearEntry){
+            modifyDisplay("0");
+            clearIt();
           }
           break;
 

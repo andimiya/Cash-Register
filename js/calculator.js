@@ -162,6 +162,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
           break;
 
@@ -180,6 +181,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
           break;
 
@@ -198,6 +200,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
           break;
 
@@ -231,6 +234,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
 
 
@@ -258,6 +262,7 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
           break;
 
@@ -282,10 +287,8 @@ var theCalculator = (function(){
           }
           if(typeOfKeyPressed === keyType.bal){
             modifyDisplay(calc.myBalance);
+            this.currentPartOfOperation = partOfOperation.number1;
           }
-
-
-
       }
     }
   };

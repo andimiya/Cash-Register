@@ -30,30 +30,6 @@ var partOfOperation = {
 
 
 var theCalculator = (function(){
-  // var keyType = {
-  //   //the category of key pressed.
-  //   number: 1,
-  //   decimal: 2,
-  //   operationSymbol: 3,
-  //   clearEntry: 4,
-  //   equal: 5
-  // };
-
-  // var partOfOperation = {
-  //   //which part of the math we are currently in
-  //   initial: 1,
-  //   //so this stands for when we open the calculator
-  //   number1: 2,
-  //   //this is if we are putting in numbers
-  //   decimal1: 3,
-  //   //this is if we use a decimal (0.) as the first input
-  //   operation: 4,
-  //   //this is when we put in an operator!
-  //   number2: 5,
-  //   decimal2: 6,
-  //   equal: 7
-  //   //this is for when we use equal
-  // };
 
   function displayHtml(whatGoesIntoDisplay){
     document.getElementById('inputDisplay').innerHTML = whatGoesIntoDisplay;
@@ -217,7 +193,6 @@ var theCalculator = (function(){
             solve(calc.firstNumber, calc.display);
             console.log(calc.display);
             modifyDisplay(calc.display);
-            //FIGURE THIS STUFF OUT RIGHT HERE SO THAT EQUAL CHANGES THE DISPLAY
             this.currentPartOfOperation = partOfOperation.equal;
           }
           if(typeOfKeyPressed === keyType.operationSymbol){
